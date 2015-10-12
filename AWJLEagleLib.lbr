@@ -5299,7 +5299,7 @@ CARE: not a standard pinout. This part has 1: cathode, 2: REF, 3: anode</descrip
 </device>
 </devices>
 </deviceset>
-<deviceset name="ATMEGAX8">
+<deviceset name="ATMEGAX8" prefix="IC" uservalue="yes">
 <description>Atmel ATmegax8 8-bit AVR microcontroller</description>
 <gates>
 <gate name="G$1" symbol="ATMEGAX8" x="0" y="0"/>
