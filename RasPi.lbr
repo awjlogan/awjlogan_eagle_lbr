@@ -56,6 +56,9 @@
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 </layers>
 <library>
+<description>Raspberry Pi outlines
+
+(https://github.com/awjlogan/awjlogan_eagle_lbr)</description>
 <packages>
 <package name="ZERO">
 <description>Source: https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi-zero-v1_2_dimensions.pdf</description>
