@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2504,6 +2504,23 @@ Taken from: http://www.buydisplay.com/download/manual/ER-OLED0.96_Series_Datashe
 <smd name="P$1" x="-2.7" y="0" dx="2" dy="1.6" layer="1"/>
 <smd name="P$2" x="2.7" y="0" dx="2" dy="1.6" layer="1"/>
 </package>
+<package name="TO220-5A">
+<description>&lt;b&gt;Molded Package&lt;/b&gt;</description>
+<wire x1="-5.105" y1="-5.105" x2="-5.105" y2="-1.064" width="0.1524" layer="27"/>
+<wire x1="-5.105" y1="-1.064" x2="-5.105" y2="0" width="0.1524" layer="27"/>
+<wire x1="-5.105" y1="0" x2="5.105" y2="0" width="0.1524" layer="27"/>
+<wire x1="5.105" y1="0" x2="5.105" y2="-1.064" width="0.1524" layer="27"/>
+<wire x1="5.105" y1="-1.064" x2="5.105" y2="-5.105" width="0.1524" layer="27"/>
+<wire x1="5.105" y1="-5.105" x2="-5.105" y2="-5.105" width="0.1524" layer="27"/>
+<wire x1="-5.105" y1="-1.064" x2="5.105" y2="-1.064" width="0.1524" layer="27"/>
+<pad name="1" x="-3.4036" y="-3.1054" drill="1.1176" diameter="1.27" shape="long" rot="R90"/>
+<pad name="5" x="3.4036" y="-3.1054" drill="1.1176" diameter="1.27" shape="long" rot="R90"/>
+<pad name="2" x="-1.7018" y="-3.1054" drill="1.1176" diameter="1.27" shape="long" rot="R90"/>
+<pad name="3" x="0" y="-3.1054" drill="1.1176" diameter="1.27" shape="long" rot="R90"/>
+<pad name="4" x="1.7018" y="-3.1054" drill="1.1176" diameter="1.27" shape="long" rot="R90"/>
+<text x="-5.461" y="-7.6454" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="6.731" y="-7.6454" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="PIC16F18X7">
@@ -3165,10 +3182,9 @@ Taken from: http://www.buydisplay.com/download/manual/ER-OLED0.96_Series_Datashe
 <pin name="VO" x="17.78" y="-2.54" visible="pin" length="middle" rot="R180"/>
 <pin name="VIN" x="-17.78" y="5.08" visible="pin" length="middle"/>
 <pin name="!EN" x="-17.78" y="-2.54" visible="pin" length="middle"/>
-<pin name="GND@1" x="-2.54" y="-12.7" visible="pin" length="middle" rot="R90"/>
+<pin name="GND" x="0" y="-12.7" visible="pin" length="middle" rot="R90"/>
 <text x="-10.16" y="12.7" size="1.778" layer="95">&gt;NAME</text>
 <text x="-10.16" y="10.16" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="GND@2" x="2.54" y="-12.7" visible="pin" length="middle" rot="R90"/>
 </symbol>
 <symbol name="USB2513B">
 <wire x1="-22.86" y1="27.94" x2="22.86" y2="27.94" width="0.254" layer="94"/>
@@ -4890,8 +4906,19 @@ CARE: not a standard pinout. This part has 1: cathode, 2: REF, 3: anode</descrip
 <connects>
 <connect gate="G$1" pin="!EN" pad="5"/>
 <connect gate="G$1" pin="FBACK" pad="4"/>
-<connect gate="G$1" pin="GND@1" pad="3"/>
-<connect gate="G$1" pin="GND@2" pad="TAB"/>
+<connect gate="G$1" pin="GND" pad="3 TAB"/>
+<connect gate="G$1" pin="VIN" pad="1"/>
+<connect gate="G$1" pin="VO" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="KC" package="TO220-5A">
+<connects>
+<connect gate="G$1" pin="!EN" pad="5"/>
+<connect gate="G$1" pin="FBACK" pad="4"/>
+<connect gate="G$1" pin="GND" pad="3"/>
 <connect gate="G$1" pin="VIN" pad="1"/>
 <connect gate="G$1" pin="VO" pad="2"/>
 </connects>
